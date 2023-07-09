@@ -1,6 +1,6 @@
 if (localStorage.getItem('note') === null) {
 
-    var default_txt = "car driving car loan car payment FRM study FRM form fill";
+    var default_txt = "Drink Water Daily \n Walk Daily \n Movie Titanic \n Movie Oppenheimer \n Movie Barbie \n  ";
   
     localStorage.setItem('note', default_txt);
   
