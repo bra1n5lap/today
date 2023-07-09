@@ -1,0 +1,28 @@
+#nav {
+	margin:0;
+	padding:0;
+}
+#nav li {
+	display:inline;
+	padding:0;
+	margin:0;
+	font-size : 1.5em;
+	text-decoration: none;
+}
+
+#nav li a {
+	text-decoration: none;
+}
+
+
+p {
+  text-align: left;
+  font-size : 1.1em;
+}
+
+#blog {
+	text-align: left;
+	font-size : 1.1em;
+	margin:0;
+	padding:0;
+}
