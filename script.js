@@ -71,7 +71,7 @@ if (localStorage.getItem('note') === null) {
   
   function displayTxt() {
   
-    var txt = localStorage.getItem('note');
+    var txt = localStorage.getItem('note').toLowerCase();
   
     var f = freq(txt);
   
