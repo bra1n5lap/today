@@ -90,7 +90,7 @@ txt = txt.replace(/[\n]+/g,'\n');
 txt = txt.replace(/( \n)+/g,'\n');
 txt = txt.replace(/(\n )+/g,'\n');
 
-txt = removeFromString(stop_words, txt);
+/* txt = removeFromString(stop_words, txt); */
   
     var f = freq(txt);
   
