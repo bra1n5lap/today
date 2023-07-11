@@ -74,8 +74,8 @@ if (localStorage.getItem('note') === null) {
 
 txt = txt.replace(/[ ]+/g,' ');
 txt = txt.replace(/[\n]+/g,'\n');
-txt = txt.replace(/[ \n]+/g,'\n');
-txt = txt.replace(/[\n ]+/g,'\n');
+txt = txt.replace(/( \n)+/g,'\n');
+txt = txt.replace(/(\n )+/g,'\n');
   
     var f = freq(txt);
   
