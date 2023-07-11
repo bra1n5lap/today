@@ -27,7 +27,8 @@ if (localStorage.getItem('note') === null) {
   
   function freq(string) {
   
-    var words = string.replace(/[.]/g, '').split(/\s/);
+    var words = string.replace(/[.]/g, '').split(/\s/); 
+
     var freqMap = {};
     words.forEach(function(w) {
       if (!freqMap[w]) {
@@ -71,8 +72,10 @@ if (localStorage.getItem('note') === null) {
   
     var txt = localStorage.getItem('note').toLowerCase().trim();
 
-txt = txt.replace(/[\n]*/g,'');
-txt = txt.replace(/[\s]+/g,' ');
+txt = txt.replace(/[ ]+/g,' ');
+txt = txt.replace(/[\n]+/g,'\n');
+txt = txt.replace(/[ \n]+/g,'\n');
+txt = txt.replace(/[\n ]+/g,'\n');
   
     var f = freq(txt);
   
