@@ -26,8 +26,6 @@ if (localStorage.getItem('note') === null) {
   document.getElementById("note").innerHTML = localStorage.getItem('note');
   
   function freq(string) {
-    var string = string.replaceAll('\n\n', ' ');
-    var string = string.replaceAll('\n', ' ');
   
     var words = string.replace(/[.]/g, '').split(/\s/);
     var freqMap = {};
@@ -71,7 +69,10 @@ if (localStorage.getItem('note') === null) {
   
   function displayTxt() {
   
-    var txt = localStorage.getItem('note').toLowerCase();
+    var txt = localStorage.getItem('note').toLowerCase().trim();
+
+txt = txt.replace(/[\n]*/g,'');
+txt = txt.replace(/[\s]+/g,' ');
   
     var f = freq(txt);
   
