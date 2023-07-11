@@ -91,8 +91,26 @@ txt = txt.replace(/( \n)+/g,'\n');
 txt = txt.replace(/(\n )+/g,'\n');
 
 /* txt = removeFromString(stop_words, txt); */
+
+
+
+
+
+
   
     var f = freq(txt);
+
+for(i=0;i<stop_words.length;i++)
+{
+   const index = f.indexOf(stop_words[i]);
+if (index > -1) { // only splice array when item is found
+  f.splice(index, 1); // 2nd parameter means remove one item only
+} 
+    
+}
+
+
+
   
     var task = txt.split('\n');
   
