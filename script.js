@@ -111,6 +111,22 @@ if (index > -1) { // only splice array when item is found
 
 
 
+var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+var months = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+var int_months = ['01','02','03','04','05','06','07','08','09','10','11','12']
+
+var now = new Date();
+var today_day = days[ now.getDay() ];
+var today_month = months[ now.getMonth() ];
+var today_date = now.getFullYear()+'-'+int_months[now.getMonth()]+'-'+now.getDate();
+
+
+f = [today_date,today_day,today_month].concat(f);
+
+
+
+
+
   
     var task = txt.split('\n');
   
