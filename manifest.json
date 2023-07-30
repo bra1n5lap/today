@@ -1,0 +1,23 @@
+{
+  "background_color": "#ffffff",
+  "description": "Today's todo! An easiest way to structure your thoughts and todos.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Today",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Today",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": [],
+  "lang": "en",
+  "share_target": {
+    "method": "GET"
+  }
+}
