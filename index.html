@@ -15,21 +15,23 @@
     <h1>Today</h1>
 
   <div id="nav"> 
-     <label for='tab1Content'>ToDo</label> 
-     <label for='tab2Content'>Notepad</label> 
+     <label for='todo'>ToDo</label> 
+     <label for='notepad'>Notepad</label> 
    </div>
 
 
 
   </header>
   <main>
+<input type='radio' name='content' id='todo' checked='true' />
 
 <div id="op">
 </div>
 
 <hr>
 
-<h1>Task Notepad</h1>
+
+<input type='radio' name='content' id='notepad' />
 <textarea id="note" name="note" type="text" style="font-family: Arial;font-size: 12pt;width:100%;height:100vw" oninput="saveTxt()">
 </textarea>
 
