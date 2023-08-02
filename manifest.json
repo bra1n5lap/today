@@ -8,7 +8,7 @@
   "scope": "/",
   "short_name": "Today",
   "start_url": "/",
-  "theme_color": "#ffffff",
+  "theme_color": "#ff0000",
   "categories": [
     "productivity",
     "utilities"
