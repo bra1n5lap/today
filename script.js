@@ -121,7 +121,7 @@ var today_month = months[ now.getMonth() ];
 var today_date = now.getFullYear()+'-'+int_months[now.getMonth()]+'-'+now.getDate();
 
 
-f = [today_date,today_day,today_month].concat(f);
+// f = [today_date,today_day,today_month].concat(f);
 
 
 
