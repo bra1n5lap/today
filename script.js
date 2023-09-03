@@ -168,28 +168,28 @@ function moreTxt() {
 
 
   var x = doc.match('#Person').fullSentences().text();
-  document.getElementById("person").innerHTML = x;
+  document.getElementById("person").innerText = x;
 
   var x = doc.match('#Place').fullSentences().text();
-  document.getElementById("place").innerHTML = x;
+  document.getElementById("place").innerText = x;
 
   var x = doc.match('#Organization').fullSentences().text();
-  document.getElementById("org").innerHTML = x;
+  document.getElementById("org").innerText = x;
 
   var x = doc.numbers().fullSentences().text();
-  document.getElementById("number").innerHTML = x;
+  document.getElementById("number").innerText = x;
 
   var x = doc.match('#Date').fullSentences().text();
-  document.getElementById("date").innerHTML = x;
+  document.getElementById("date").innerText = x;
 
   var x = doc.match('#QuestionWord').fullSentences().text();
-  document.getElementById("question").innerHTML = x;
+  document.getElementById("question").innerText = x;
 
   var x = doc.match('#Url').fullSentences().text();
-  document.getElementById("url").innerHTML = x;
+  document.getElementById("url").innerText = x;
 
   var x = doc.match('#Acronym').fullSentences().text();
-  document.getElementById("acronym").innerHTML = x;
+  document.getElementById("acronym").innerText = x;
 
 
   // var x = doc.unigrams()
