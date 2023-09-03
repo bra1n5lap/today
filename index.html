@@ -1,59 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Today's todo">
   <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
-<link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="manifest.json" />
   <title>Today</title>
 </head>
+
 <body>
   <header>
     <h1>Today</h1>
 
-  <br /> 
-   <br />
+    <br />
+    <br />
 
-  <div id="nav"> 
-     <label for='todo'>ToDo</label> 
-     <label for='notepad'>Notepad</label> 
-     <label for='more'>More...</label> 
+    <div id="nav">
+      <label for='todo'>ToDo</label>
+      <label for='notepad'>Notepad</label>
+      <label for='more'>More...</label>
 
-   </div>
+    </div>
 
 
 
   </header>
   <main>
-<input type='radio' name='content' id='todo' checked='true' />
+    <input type='radio' name='content' id='todo' checked='true' />
 
-<div id="op">
-</div>
+    <div id="op">
+    </div>
 
-<hr>
+    <hr>
 
 
-<input type='radio' name='content' id='notepad' />
-<div>
-<textarea id="note" name="note" type="text" style="font-family: Arial;font-size: 12pt;width:100%;height:100vw" oninput="saveTxt()">
+    <input type='radio' name='content' id='notepad' />
+    <div>
+      <textarea id="note" name="note" type="text" style="font-family: Arial;font-size: 12pt;width:100%;height:100vw"
+        oninput="saveTxt()">
 </textarea>
 
-</div>
+    </div>
 
 
-<input type='radio' name='content' id='more' />
+    <input type='radio' name='content' id='more' />
 
-<div id="">
-</div>
+    <details>
+      <summary>Date and Time</summary>
+      <p id="date"></p>
+    </details>
 
+
+    <details>
+      <summary>Person</summary>
+      <p id="person"></p>
+    </details>
+
+    <details>
+      <summary>Place</summary>
+      <p id="place"></p>
+    </details>
+
+    <details>
+      <summary>Organization</summary>
+      <p id="org"></p>
+    </details>
+
+    <details>
+      <summary>Number</summary>
+      <p id="number"></p>
+    </details>
+
+    <details>
+      <summary>Question</summary>
+      <p id="question"></p>
+    </details>
+
+    <details>
+      <summary>Links</summary>
+      <p id="url"></p>
+    </details>
+
+    <details>
+      <summary>Acronym</summary>
+      <p id="acronym"></p>
+    </details>
 
 
   </main>
   <footer>
   </footer>
+
+  <script src="https://unpkg.com/compromise"></script>
+  <script src="https://unpkg.com/compromise-dates"></script>
+  <script src="https://unpkg.com/compromise-stats"></script>
+
+  <script defer>
+    nlp.plugin(compromiseDates) // load the plugin
+    nlp.plugin(compromiseStats)
+  </script>
   <script src="script.js"></script>
+
 </body>
+
 </html>
