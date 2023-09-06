@@ -167,28 +167,28 @@ function moreTxt() {
   var doc = nlp(txt);
 
 
-  var x = doc.match('#Person').fullSentences().text();
+  var x = doc.match('#Person').fullSentences().unique().text();
   document.getElementById("person").innerText = x;
 
-  var x = doc.match('#Place').fullSentences().text();
+  var x = doc.match('#Place').fullSentences().unique().text();
   document.getElementById("place").innerText = x;
 
-  var x = doc.match('#Organization').fullSentences().text();
+  var x = doc.match('#Organization').fullSentences().unique().text();
   document.getElementById("org").innerText = x;
 
-  var x = doc.numbers().fullSentences().text();
+  var x = doc.numbers().fullSentences().unique().text();
   document.getElementById("number").innerText = x;
 
-  var x = doc.match('#Date').fullSentences().text();
+  var x = doc.match('#Date').fullSentences().unique().text();
   document.getElementById("date").innerText = x;
 
-  var x = doc.match('#QuestionWord').fullSentences().text();
+  var x = doc.match('#QuestionWord').fullSentences().unique().text();
   document.getElementById("question").innerText = x;
 
-  var x = doc.match('#Url').fullSentences().text();
+  var x = doc.match('#Url').fullSentences().unique().text();
   document.getElementById("url").innerText = x;
 
-  var x = doc.match('#Acronym').fullSentences().text();
+  var x = doc.match('#Acronym').fullSentences().unique().text();
   document.getElementById("acronym").innerText = x;
 
 
