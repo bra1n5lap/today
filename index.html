@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Today</h1>
+
+    <hr>
+
+    <div id="insight">For additional insights...</div>
+
+    <hr>
+
+    <div id="nav">
+
+        <label for='todo'>ToDo</label>
+
+        <label for='notepad'>Notepad</label>
+
+        <label for='calendar'>Calendar</label>
+
+    </div>
+
+    <input type='radio' name='content' id='todo' checked='true' />
+
+    <div id="todo_list">todo section
+
+
+    </div>
+
+    <input type='radio' name='content' id='notepad' />
+
+    <div>
+        <textarea id="note" name="note" type="text" style="font-family: Arial;font-size: 12pt;width:100%;height:100vw"
+            oninput="saveTxt()">
+</textarea>
+
+
+    </div>
+
+    <input type='radio' name='content' id='calendar' />
+
+    <div>calendar section</div>
+
+
+
+
+    <script src="https://unpkg.com/compromise"></script>
+    <script src="https://unpkg.com/compromise-dates"></script>
+    <script src="https://unpkg.com/compromise-stats"></script>
+
+    <script defer>
+        nlp.plugin(compromiseDates) // load the plugin
+        nlp.plugin(compromiseStats)
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

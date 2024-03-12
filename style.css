@@ -1,0 +1,10 @@
+input[name=content]+div { 
+    display: none; 
+  } 
+   
+  input[name=content]:checked+div { 
+    display: block; 
+ /*   width: 80%; */
+    margin: 0 auto; 
+ /*   font-size: 2em; */
+  }
