@@ -1,6 +1,6 @@
 if (localStorage.getItem('note') === null) {
 
-  var default_txt = "Drink Water Daily \n Walk Daily \n Movie Titanic \n Movie Oppenheimer \n Movie Barbie \n  ";
+  var default_txt = "Drink Water Daily \nWalk Daily \nMovie Titanic \nMovie Oppenheimer \nMovie Barbie \n  ";
 
   localStorage.setItem('note', default_txt);
 
@@ -42,7 +42,7 @@ function moreTxt() {
     matches = matches.replaceAll("\n\n", "\n");
     // matches = matches.replaceAll("\n","<br>");
 
-    let output = "<div><h1>" + thing + "</h1><textarea onKeyPress=\"updateTxt(event,this,\'" + thing + "\')\" class=\"topic\" style = \"width:100%;height:30vw\">" + matches + "</textarea></div>";
+    let output = "<div><h1>" + thing + "</h1><textarea onKeyPress=\"updateTxt(event,this,\'" + thing + "\')\" class=\"topic\" >" + matches + "</textarea></div>";
     final_text += output;
 
   }
