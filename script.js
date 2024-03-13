@@ -42,7 +42,7 @@ function moreTxt() {
     matches = matches.replaceAll("\n\n", "\n");
     // matches = matches.replaceAll("\n","<br>");
 
-    let output = "<div><h1>" + thing + "</h1><textarea onKeyPress=\"updateTxt(event,this,\'" + thing + "\')\" class=\"topic\" style = \"width:100%;height:10vw\">" + matches + "</textarea></div>";
+    let output = "<div><h1>" + thing + "</h1><textarea onKeyPress=\"updateTxt(event,this,\'" + thing + "\')\" class=\"topic\" style = \"width:100%;height:30vw\">" + matches + "</textarea></div>";
     final_text += output;
 
   }
@@ -110,10 +110,76 @@ function updateTxt(evnt, elm, topic) {
 
 
 
+function top_three() {
+
+  var txt = localStorage.getItem('note');
+  clean_txt = txt.replaceAll("\n\n", "\n");
+  txt_list = clean_txt.split("\n");
+  max_length = txt_list.length - 1;
+
+  var d = new Date();
+
+  var seed = d.getFullYear() + "" + d.getMonth() + "" + d.getDate();
+  seed = seed * 1;
+
+
+  var seededRandom = function (min, max) {
+    max = max || 1;
+    min = min || 0;
+
+    seed = (seed * 9301 + 49297) % 233280;
+    var rnd = seed / 233280;
+
+    return Math.floor(min + rnd * (max - min));
+  }
+
+  var first = seededRandom(1, max_length);
+  var second = seededRandom(1, max_length);
+  var third = seededRandom(1, max_length);
+
+  var top3 = [first, second, third];
+
+  top3 = new Set(top3);
+
+  var final_result = "<ul>";
+
+  for (let i of top3) {
+
+    final_result += "<li>" + txt_list[i] + "</li>";
+
+  }
+
+  final_result += "</ul>";
+
+  document.getElementById("today_section").innerHTML = final_result;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //   displayTxt();
 
 moreTxt();
+
+top_three();
 
 
 
