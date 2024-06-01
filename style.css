@@ -51,7 +51,7 @@ input[name=content]+div {
    margin: 20px auto;
    font-family: Arial;
    font-size: 12pt;
-   width:100%;
+   /* width:100%; */
    height:100vw;
    border: 1px solid blue;
    border-radius: 10px;
@@ -60,7 +60,7 @@ input[name=content]+div {
 
 .topic {
    padding: 5px;
-   width:90vw;
+   /* width:90vw; */
    height:15vh;
    border: 1px solid blue;
    border-radius: 10px;
